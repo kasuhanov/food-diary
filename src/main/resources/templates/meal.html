@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <title>SPRIGN</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Result</h1>
+<p th:text="'id: ' + ${meal.id}"></p>
+<p th:text="'name: ' + ${meal.time}"></p>
+<div th:if="${meal.foodList.size()!=0}">
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Measure</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="food: ${meal.foodList}">
+            <td th:text="${food.id}"></td>
+            <td th:text="${food.name}"></td>
+            <td th:text="${food.quantity}"></td>
+            <td th:text="${food.measure}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

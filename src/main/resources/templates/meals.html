@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <title>SPRIGN</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Link</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="meal: ${meals}">
+        <td th:text="${meal.toString()}"></td>
+        <td><a th:href="@{/meal/{id}(id=${meal.id})}">link</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
