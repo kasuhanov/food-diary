@@ -5,11 +5,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import su.kas.fooddiary.repo.MealRepo;
 
 @Controller
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class MealController {
     private final MealService ms;
     private final MealRepo mr;

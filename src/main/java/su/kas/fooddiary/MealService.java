@@ -4,12 +4,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import su.kas.fooddiary.model.Meal;
 import su.kas.fooddiary.repo.MealRepo;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class MealService {
 	private final MealRepo mr;
 
